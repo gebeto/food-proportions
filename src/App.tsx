@@ -69,49 +69,22 @@ function FoodRow({
           size="small"
           label="Name"
         />
-        <Stack
-          direction="row"
-          divider={<Divider orientation="vertical" flexItem />}
-          spacing={1}
-          alignItems="center"
-        >
-          <TextField
-            fullWidth
-            name={`${name}.gramsPerDay`}
-            variant="outlined"
-            size="small"
-            label="Grams per day"
-            placeholder="700"
-            inputProps={{
-              inputMode: "numeric",
-              pattern: "[0-9]*",
-              type: "number",
-            }}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">grams</InputAdornment>
-              ),
-            }}
-          />
-          <TextField
-            fullWidth
-            name={`${name}.gramsPerMeal`}
-            variant="outlined"
-            size="small"
-            label="Grams per meal"
-            placeholder="350"
-            inputProps={{
-              inputMode: "numeric",
-              pattern: "[0-9]*",
-              type: "number",
-            }}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">grams</InputAdornment>
-              ),
-            }}
-          />
-        </Stack>
+        <TextField
+          fullWidth
+          name={`${name}.gramsPerDay`}
+          variant="outlined"
+          size="small"
+          label="Grams per day"
+          placeholder="700"
+          inputProps={{
+            inputMode: "numeric",
+            pattern: "[0-9]*",
+            type: "number",
+          }}
+          InputProps={{
+            endAdornment: <InputAdornment position="end">grams</InputAdornment>,
+          }}
+        />
         <Stack
           direction="row"
           divider={<Divider orientation="vertical" flexItem />}
